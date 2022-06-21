@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Bebas Neue", cursive;
+  background: #2b2e43;
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4eb879;
+}
+::-webkit-scrollbar-thumb {
+  background: #4eb879;
+}
+svg {
+  width: 90%;
+  height: 90%;
+  max-width: 500px;
+  max-height: 200px;
+}
+.gsap-animate {
+  height: 100vh;
+}
+.h-100vh {
+  height: 100vh;
+}
+.login-text:hover {
+  padding: 15px;
+  transition: 0.8s ease-in-out;
+  cursor: pointer;
+  color: black !important;
+  text-transform: capitalize;
+  background: white;
+}
+.form-control:focus {
+  box-shadow: inset 0 0 0 0 #111;
+  border-color: #ccc;
+}
+.modal-sign {
+  height: max-content;
+  background: #484c69; /* fallback for old browsers */
+  padding: 25px;
+  border-radius: 0 0 25px 0;
+}
+.user,
+.password,
+.name {
+  position: absolute;
+  top: 6px;
+  right: 2%;
+  font-size: 26px;
+  font-weight: bold;
+}
+.submit-form {
+  width: 200px;
+  color: #4eb879;
+
+  background: #111;
+  transition: 0.3s;
+  height: 43px;
+}
+.submit-form:hover {
+  background-color: white;
+  color: black !important;
+  font-weight: bolder;
+}
+.modal-todo {
+  width: 100%;
+  padding: 15px;
+}
+.info {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  background: white;
+  width: fit-content;
+  height: fit-content;
+  transition: 0.3s all;
+  padding: 10px;
+  border-radius: 0 0 10px 0;
+}
+.info.settings {
+  height: 45px;
+  z-index: 999;
+}
+.gear-animate {
+  animation: gear-animate 2.5s infinite alternate-reverse;
+  cursor: pointer;
+}
+.gear-animate:hover {
+  animation-play-state: paused;
+  color: #b31217;
+}
+.modal-custome {
+  min-width: 336px;
+  max-width: 530px;
+  height: 600px;
+  margin: auto;
+  background-color: #343a40;
+  padding: 15px;
+  position: absolute;
+  height: 0;
+  opacity: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.error-display {
+  position: absolute;
+  right: 7%;
+  top: 22%;
+  color: black;
+  color: #ff0008;
+}
+.todo_text {
+  color: #e1eaf2;
+}
+.todo-input {
+  background: white;
+  border: none;
+  border: 1px solid black;
+  padding: 5px;
+  width: 300px;
+  outline: none;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+.todo-submit {
+  background: #4eb879;
+  border: none;
+  width: 300px;
+  outline: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 25px;
+}
+.todo-update {
+  background: #0d6efd;
+  border: none;
+  width: 300px;
+  outline: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 25px;
+}
+.todo-list {
+  color: white !important;
+  text-align: center;
+  font-size: 55px;
+  font-family: "Covered By Your Grace", cursive;
+  position: relative;
+}
+.todo-list::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 32%;
+  width: 36%;
+  height: 3px;
+  background: #4eb879;
+  right: 50%;
+}
+.dates {
+  color: #60666e;
+}
+.items-todoList {
+  /* margin-top: 25px; */
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.tasks-yet {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.no-tasks {
+  color: white;
+  width: 200px;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+  background: black;
+  opacity: 0;
+}
+.items-todoList li {
+  background: #484c69;
+  color: white;
+  min-width: 310px;
+  max-width: 300px;
+  border-radius: 15px;
+  margin: 5px 0;
+  color: white;
+  padding: 10px;
+  word-break: break-all;
+}
+.empty-input {
+  top: 25%;
+  position: absolute;
+  color: white;
+  right: 5%;
+  transform: scale(1.5);
+}
+.auth-background {
+  background: #2b2e43;
+}
+.bounce {
+  outline: 0;
+  border-color: black;
+  animation-name: bounce;
+  animation-duration: 0.5s;
+  animation-delay: 0.25s;
+}
+.delete-item {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: -30%;
+  background: #4a156e;
+  width: 30px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+  line-height: 40px;
+  text-align: center;
+}
+.done-item {
+  transition: 0.3s ease-in;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: -17%;
+  background: white;
+  color: black;
+  cursor: pointer;
+  font-weight: bolder;
+  width: 30px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.item-done {
+  background: #dc3545 !important;
+  text-decoration: line-through;
+  text-decoration-color: #ff0008;
+}
+.done-icon {
+  opacity: 0.3;
+}
+.actions-tasks {
+  max-width: 100%;
+  align-items: center;
+  /* margin: auto; */
+  gap: 45%;
+  /* width: 100%; */
+  /* margin-top: 22px; */
+  padding: 15px 0 0 0;
+  color: white;
+}
+.settings {
+  position: absolute;
+  background: white;
+  left: 0;
+  border-radius: 0 0 5px;
+  width: 88px !important;
+  padding: 4px 6px;
+  height: 86px;
+}
+.item-check-delete {
+  position: absolute;
+  left: -5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+span.edit-specific {
+  color: #dc3545;
+  transition: 0.3s ease-in-out !important;
+}
+/* animations */
+
+span.edit-specific:hover {
+  color: white !important;
+}
+edit-specific:hover {
+  color: black !important;
+}
+span.edit-specific-danger {
+  color: white !important;
+}
+span.edit-specific-danger:hover {
+  color: red !important;
+}
+.done-item:hover,
+.delete-item:hover {
+  opacity: 0.5;
+}
+.settings span:hover,
+.settings span a:hover {
+  color: #4eb879 !important;
+}
+@keyframes gear-animate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+  37% {
+    transform: translateX(5px);
+    timing-function: ease-out;
+  }
+  55% {
+    transform: translateX(-5px);
+    timing-function: ease-in;
+  }
+  73% {
+    transform: translateX(4px);
+    timing-function: ease-out;
+  }
+  82% {
+    transform: translateX(-4px);
+    timing-function: ease-in;
+  }
+  91% {
+    transform: translateX(2px);
+    timing-function: ease-out;
+  }
+  96% {
+    transform: translateX(-2px);
+    timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+}
+/* MEDIA QUERIES */
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .done-item {
+    transition: 0.3s ease-in;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 6%;
+    background: white;
+    color: black;
+    cursor: pointer;
+    font-weight: bolder;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 25px !important;
+    /* position: initial !important; */
+  }
+  .delete-item {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: -3.9%;
+    background: #4a156e;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+    width: 27px !important;
+    height: 27px !important;
+    line-height: 27px !important;
+    border-radius: 27px !important;
+  }
+  .items-todoList li {
+    padding: 10px 60px;
+  }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+}
